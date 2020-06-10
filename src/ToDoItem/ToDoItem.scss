@@ -1,0 +1,87 @@
+.todo-item {
+    display: flex;
+    margin-bottom: 21px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+    justify-content: space-between;
+
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    width: 14px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #b102fc;
+    border-bottom: 4px solid #b102fc;
+    transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+
+}
+
+
+input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+
+.description {
+    font-size: 20px;
+    margin: 0;
+}
+
+input[type="checkbox"]:checked + .description{
+    color: #cccccc;
+    text-decoration: line-through;
+}
+
+.deleteButton {
+    background-color: #b102fc;
+    color: #ffffff;
+    border: 1px solid transparent;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    max-height: 20px;
+}
+
+.deleteButton:hover {
+    background-color: #e7a5f5;
+}
+
+
